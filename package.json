@@ -13,6 +13,7 @@
     "@mantine/core": "^7.17.0",
     "@mantine/hooks": "^7.17.0",
     "@tabler/icons-react": "^3.30.0",
+    "@vercel/speed-insights": "^1.2.0",
     "axios": "^1.7.9",
     "octokit": "^4.1.2",
     "react": "^19.0.0",
