@@ -23,6 +23,12 @@ div.HomeDiv  {
   
 }
 
+.mantine-Accordion-root {
+  --webkit-transform: translateZ(0);
+  --webkit-perspective: 1000;
+  --webkit-backface-visibility: hidden;
+}
+
 .badge-blue-light {
   background-color: var(--color-blue-light) !important;
 }
