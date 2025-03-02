@@ -18,8 +18,8 @@
 }
 
 div.HomeDiv  {
-  width: 100dvw;
-  height: 100dvh
+  width: 100vw;
+  height: 100vh
   
 }
 
@@ -124,7 +124,7 @@ body {
   display: flex;
   place-items: center;
   min-width: 320px;
-  min-height: 100dvh;
+  min-height: 100vh;
   -webkit-overflow-scrolling: touch;
 }
 
