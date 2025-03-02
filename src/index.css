@@ -23,6 +23,12 @@ div.HomeDiv  {
   
 }
 
+.mantine-Accordion-panel {
+  --webkit-transform: translateZ(0);
+  --webkit-perspective: 1000;
+  --webkit-backface-visibility: hidden;
+}
+
 .mantine-Accordion-root {
   --webkit-transform: translateZ(0);
   --webkit-perspective: 1000;
