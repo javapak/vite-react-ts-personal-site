@@ -35,8 +35,8 @@ div.HomeDiv  {
 }
 
 
-.AccordionPanel {
-  padding: 20px;
+.AccordionPanel > div {
+  padding: 10px;
 }
 
 div.AccordionParent {
