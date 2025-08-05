@@ -1,16 +1,20 @@
-import { Accordion, Avatar, Paper, Stack, Badge, Button, Group, Text, Box} from '@mantine/core';
+import { Accordion, Avatar, Paper, Stack, Badge, Button, Group, Text, Box, Blockquote} from '@mantine/core';
 import { ReactNode } from 'react';
 import TSModelingTool from './TSModelingTool';
 import GithubProjectCards from './GithubProjectCards';
 import { IconBrandLinkedin, IconMail, IconFileCv, IconBrandGithub } from '@tabler/icons-react';
+import { InfoCard } from './InfoCard';
+import { useDisclosure } from '@mantine/hooks';
 
 
 export default function ContentAccordion() {
+const [opened, { toggle }] = useDisclosure();
+
 const accordionContent =[
   {
     value: 'About', 
-    headerImage: <div className='avatar'><Avatar radius='xl' size='xl' src="profile.jpg" /><Stack><p>James Alexander Pakis</p></Stack></div>, 
-    content: "I graduated with a Bachelor of Science degree in Computer Science from University of Memphis in August 2022, where I learned the fundamentals of object-oriented programming, data structures, algorithms, and software engineering. I started working at Technergetics on October 17, 2022, and continued working there up until the end of October 2024. My time there consisted of developing prototype tooling for model based software/system engineering that could be utilized within the VS Code IDE environment. I utilized mostly Typescript, but also spent a large chunk of my time with a JVM language called Xtend. I also still feel more knowledgable overall with languages like Java and anything derivative of it where object oriented design can be taken advantage of."
+    headerImage: <InfoCard picturePath='profile.jpg' email='alexpakis2@gmail.com' name='James Alexander Pakis' role='Software Engineer' />,
+    content: "I graduated with a Bachelor of Science degree in Computer Science from University of Memphis in August 2022, where I learned the fundamentals of object-oriented programming, data structures, algorithms, and software engineering. I started working at Technergetics on October 17, 2022, and continued working there up until the end of October 2024. My time there consisted of developing prototype tooling for model based software/system engineering that could be utilized within the VS Code IDE environment. I utilized mostly Typescript, but also spent a large chunk of my time with a JVM language called Xtend. I enjoy both web development with Javascript/Typescript as well as Java and anything derivative or similar to it where object oriented design can be taken advantage of."
   },
   {
     value: 'Experience', 
@@ -137,7 +141,7 @@ const accordionContent =[
       <Accordion.Control>{item.value}</Accordion.Control>
       <Accordion.Panel className='AccordionPanel'>    
         {item.headerImage && (<div className='HeaderImage' children={item.headerImage} />)}
-        {item.content && (<Paper withBorder p="md">{item.content}</Paper>)}
+        {item.content && (<Blockquote p="md">{item.content}</Blockquote>)}
         {item.component && (<div children={item.component} />)}
       </Accordion.Panel>
     </Accordion.Item>
